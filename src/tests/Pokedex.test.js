@@ -53,8 +53,8 @@ describe('Requisito 05', () => {
     const buttonFire = screen.getByRole('button', { name: /fire/i });
     userEvent.click(buttonFire);
     const fireType = screen.getAllByTestId(/pokemon-type/i);
-    fireType.forEach((fire) => {
-      expect(fire).toBeInTheDocument();
+    fireType.forEach((item) => {
+      expect(item).toBeInTheDocument();
     });
     expect(fireType[1]).toBeInTheDocument();
   });
